@@ -44,8 +44,7 @@ async function renderMovie(data) {
         const data = await dataResponse.json()
         
         
-        findFilm.innerHTML += `
-            <div class="movie-data">
+        findFilm.innerHTML += `<div class="movie-data">
 
                 <img src="${data.Poster}" class="movie-poster-img">
                     <div class="data-heading">

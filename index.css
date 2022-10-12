@@ -65,14 +65,14 @@ input {
 
 
 /* layout */
-#find-film {
+.find-film-div {
     display: grid;
-    grid-template:  auto  auto   /  auto auto;
+    grid-template:  auto  auto   / auto auto auto;
     grid-gap: 1em 1em;
 }
 .container {
     width: 95%;
-    max-width: 1100px;
+    max-width: 1400px;
     margin:  0 auto;
 }
 .container-flex {
@@ -178,42 +178,16 @@ section .get-movie {
     border-radius: 5px;
 }
 
-
-
 /* media queries */
-
-@media (max-width:500px) {
-    body {
-        text-align: center;
-    }
-
-    #find-film {
-        grid-template:  auto  auto   /  auto auto;
-        grid-gap: 1em 1em;
-    }
-    .movie-data {
-        flex-direction: column;
-    }
-    .movie-data-primary {
-        display: flex;
-        justify-content: center;
-    }
-    .get-movie  {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .film-title  {
-        padding-right: 0;
-    }
-    /* .data-info .text {
-        width: 100%;
-    } */
-      
-    
-
-
-    
+@media (min-width:600px) {
     
 }
+
+
+
+
+
+
+
+
 
