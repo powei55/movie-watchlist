@@ -67,7 +67,7 @@ input {
 /* layout */
 .container {
     width: 95%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin:  0 auto;
 }
 .container-flex {
@@ -92,6 +92,7 @@ button#search-movie {
     cursor: pointer;
     font-size: .7rem;
 }
+
 /* styling for movie -data */
 
 section .get-movie {
@@ -102,7 +103,6 @@ section .get-movie {
  .movie-data {
     display: flex;
     margin-bottom: 1em;
-   
 }
 
 
@@ -172,10 +172,12 @@ section .get-movie {
 
 
 /* media queries */
+
 @media (min-width:600px) {
     .container-flex {
         flex-direction: row;
     }
+    
     header a {
         margin-left: 10em;
         margin: 0 0 0 10em;
@@ -193,9 +195,19 @@ section .get-movie {
     .data-info .plot-text {
         width: 40%;
     }
+    body {
+        /* background-color: gold; */
+    }
     
 }
+
+
 @media (max-width:500px) {
+    .container-flex {
+        flex-direction: column;
+    }
+    
+   
     body {
         text-align: center;
     }
@@ -217,11 +229,7 @@ section .get-movie {
     .data-info .text {
         width: 100%;
     }
-      
-    
-
-
-    
     
 }
+
 
