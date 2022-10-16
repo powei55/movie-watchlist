@@ -48,7 +48,6 @@ async function renderMovie(data) {
 
                 <img src="${data.Poster}" class="movie-poster-img">
                     <div class="data-heading">
-                    
                         <h3 class="film-title">Movie Name: ${data.Title}</h3>
                         <span><img class="side-img" src="https://us.123rf.com/450wm/jenjawin/jenjawin1904/jenjawin190400218/120265451-gold-star-rating-icon-vector-eps10-star-sign-yellow-star-icon-.jpg?ver=6"></span>
                         <p class="star-rating">${data.imdbRating}</p>
