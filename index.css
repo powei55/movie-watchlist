@@ -4,7 +4,7 @@ html, body {
     padding: 0;
     font-size: 1.5rem;
     font-family: 'Ubuntu', sans-serif;
-    background: #0d1321;
+    background: #f0ead2;
 }
 
 img {
@@ -26,7 +26,6 @@ header h1 {
     font-size: 1.5rem;
     text-transform: capitalize;
     margin: 0;
-    background-color: green;
 }
 
 header a {
@@ -37,12 +36,13 @@ header a {
 
 }
 input {
-    width: 50%;
+    width: 100%;
     font-size: .8rem;
     padding: 10px;
     margin-bottom: 1em;
     margin-top: -1em;
     border-radius: 5px;
+    border: none;
 }
 #search-movie {
     
@@ -74,18 +74,16 @@ input {
 .container-flex {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 header {
-    /* background: black; */
-    background-image: url("https://media.istockphoto.com/photos/computer-icons-flying-of-the-monitor-of-a-laptop-picture-id656268116?k=20&m=656268116&s=612x612&w=0&h=M7I_-oa93NS4oKuDHXS2tSxQpsWlwdApB0wLwtr-zyk=");
+    background: black;
+    background-image: url('https://media.istockphoto.com/photos/television-on-cupboard-on-the-middle-of-modern-living-room-background-picture-id1392223030?k=20&m=1392223030&s=612x612&w=0&h=AsLEtikgkUNLljkBJe_AHqBuwg94Eia_msX9X5XpT2A=');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color:  white;
-    padding: 2em 0;
-    border:  10px solid green;
+    padding: 3em 0;
     text-align: center;
     
 }
@@ -96,23 +94,24 @@ nav ul {
     display: flex;
     justify-content: center;
     padding: 0;
-    margin: 0;
+    margin: 0 10em;
 }
 nav li {
-    margin-left: 0;
+    text-transform: capitalize;
 }
-@media (max-width:675px) {
-    nav ul {
-        flex-direction: column;
-    }
-}
+
+
 
 button#search-movie {
     padding: .7em 1em;
     border-radius: .2em;
     border: none;
     cursor: pointer;
-    font-size: .7rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+.current-page {
+    border-bottom: 5px solid #fff;
 }
 
 /* styling for movie -data */
@@ -200,10 +199,8 @@ section .get-movie {
         flex-direction: row;
     }
     
-    header a {
-        margin-left: 10em;
-        margin: 0 0 0 10em;
-        /* font-size: .8rem */
+    nav li {
+        margin-left: 3em;
     }
     header h1 {
         margin: 0;
@@ -211,15 +208,12 @@ section .get-movie {
     }
     .get-movie, button {
         margin-top: -.5em;
-        padding: .1em 1em 
     }
     
     .data-info .plot-text {
         width: 40%;
     }
-    body {
-        /* background-color: gold; */
-    }
+    
     
 }
 
@@ -228,7 +222,9 @@ section .get-movie {
     .container-flex {
         flex-direction: column;
     }
-    
+    nav ul {
+        flex-direction: column;
+    }
    
     body {
         text-align: center;
@@ -242,8 +238,9 @@ section .get-movie {
     }
     .get-movie  {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: center;
+        
     }
     .film-title  {
         padding-right: 0;
