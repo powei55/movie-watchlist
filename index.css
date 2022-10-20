@@ -19,7 +19,7 @@ p {
     margin: 0;
     letter-spacing: 1px;
     font-weight:900 ;
-    color: #cbdfbd;
+    color: black;
 }
 
 header h1 {
@@ -127,27 +127,37 @@ section .get-movie {
 
 .find-film-div {
     display: grid;
-    grid-template-columns:  repeat(3, 1fr );
+    grid-template-columns: repeat(2, calc(100% / 2));
+    grid-gap: 1em 2em;
 }
 
  .movie-data {
+    border: 5px solid black;
     display: grid;
-    grid-template: auto auto auto / auto auto auto;
-}
+    grid-template:  auto auto  / 1em auto auto 1em;
+ }
 
  .movie-poster-img {
     border-radius: .5em;
     grid-column: 1 / -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .data-heading {
+    border:  5px solid black;
     display: flex;
     grid-column: 1 / -1 ;
+    margin-bottom: 1rem;
 }
 .data-info {
     display: flex;
     grid-column: 1 / -1;
 } 
+.plot-text {
+    grid-column: 1 / 4;
+}
 .watch-list-btn {
     align-self: flex-start;
 }
@@ -202,7 +212,13 @@ section .get-movie {
 
 
 /* media queries */
-
+ @media (min-width:650px) {
+    .find-film-div {
+        display: grid;
+        grid-template-columns: repeat(3, calc(100% / 2));
+        grid-gap: 1em 4em;
+    }
+ }
 
 
 
