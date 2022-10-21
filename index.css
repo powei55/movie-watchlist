@@ -22,6 +22,7 @@ p {
     color: black;
 }
 
+
 header h1 {
     font-size: 2rem;
     text-transform: capitalize;
@@ -36,19 +37,8 @@ header a {
     margin: 0;
 
 }
-input {
-    width: 50%;
-    font-size: .8rem;
-    padding: 10px;
-    margin-bottom: 1em;
-    margin-top: -1em;
-    border-radius: 5px;
-    border: none;
-    display: flex;
-}
-#search-movie {
-    
-}
+
+
 .film-title {
     font-size: 1.5rem;
     padding-right:  .2em;
@@ -57,7 +47,7 @@ input {
 
 }
  .text {
-    font-size: .6rem;
+    font-size: .8rem;
     margin-right: 3em;
     margin: 0;
 }
@@ -100,17 +90,33 @@ nav ul {
     align-items: center;
     padding: 0;
     margin: 0;
+    font-weight: 900;
 }
 nav li {
     text-transform: capitalize;
     margin: .2em 0;
+    text-transform: uppercase;
+}
+ li a:hover {
+    color: #023e8a;
+}
+input {
+    width: 50%;
+    font-size: 1.3rem;
+    padding: .7em;
+    margin-bottom: 1em;
+    margin-top: -1em;
+    border-radius: 5px;
+    border: none;
+    display: flex;
 }
 
 
 
 button#search-movie {
-    padding: .7em 1em;
-    border-radius: .2em;
+    background: #0a9396;
+    padding: .7em 2em;
+    border-radius: 7em;
     border: none;
     cursor: pointer;
     font-size: 1rem;
@@ -132,9 +138,10 @@ section .get-movie {
 }
 
  .movie-data {
-    border: 5px solid black;
+    border: 5px solid rgb(231, 229, 229);
     display: grid;
     grid-template:  auto auto  / 1em auto auto 1em;
+    /* padding: .5em; */
  }
 
  .movie-poster-img {
@@ -146,14 +153,17 @@ section .get-movie {
 }
 
 .data-heading {
-    border:  5px solid black;
+    /* border:  5px solid black; */
     display: flex;
     grid-column: 1 / -1 ;
-    margin-bottom: 1rem;
+    align-items: center;
+    text-transform: capitalize;
 }
 .data-info {
     display: flex;
     grid-column: 1 / -1;
+    text-transform: uppercase;
+  
 } 
 .plot-text {
     grid-column: 1 / 4;
@@ -201,23 +211,106 @@ section .get-movie {
     align-items: center;
 }
 .watch-list-btn {
-    color: red;
-    padding: .1em 1em;
+
+    
+    
+}
+.watch-list-btn {
     margin-left: 1em;
+    padding: .5em 1em;
+    font-size: 1rem;
+    background: #ccd5ae;
+    color: #0a0908;
+    text-transform: uppercase;
     cursor: pointer;
     border: none;
     border-radius: 5px;
+    font-weight: 900;
 }
 
 
 
 /* media queries */
  @media (min-width:650px) {
-    .find-film-div {
-        display: grid;
-        grid-template-columns: repeat(3, calc(100% / 2));
-        grid-gap: 1em 4em;
+    .container-flex {
+        flex-direction: row;
+        justify-content: space-between;
     }
+    header h1{
+        font-size: 3rem; 
+        margin: 0;
+    }
+    header {
+        text-align: left;
+        padding:3em 0;
+    }
+    nav ul {
+        flex-direction: row;
+    }
+    nav li {
+        margin-left: 3em;
+        letter-spacing: 1;
+    }
+    .find-film-div {
+        grid-template-columns: repeat(3, calc(100% / 3));
+        grid-gap: 1em 1em;
+    }
+    .movie-data {
+         grid-template: 1em auto auto auto 1em / 200px auto auto 1em;
+         border: 10px solid #ccd5ae;
+        
+     }
+
+     .movie-poster-img{
+        grid-row: 1 / -1 ;
+        grid-column: 1 / 2 ;
+        border-radius: none;
+        padding: .5em;
+     }
+     .data-heading  {
+        grid-column: 2 / -1 ;
+        grid-row: 2 / 2;
+        align-items: center;
+        padding: 10px;
+        color: #003566;
+       
+     }
+     .data-info {
+        grid-column: 2 / -2 ;
+        grid-row: 3;
+        margin:0;
+        padding-bottom: 10px;
+        color: #003566;
+        
+
+     }
+     .plot-text {
+        grid-row: 4 ;
+        grid-column:2 / -1 ;
+        font-size: 1rem;
+        margin: 0;
+        color: #003566;
+        text-transform: capitalize;
+        line-height: 1.5rem;
+        /* margin-bottom: 20px; */
+     }
+     .film-title, .star-rating {
+        font-size: 1rem;
+        padding-right: 0; 
+     }
+     .text {
+        font-size: .7rem;
+        color: #003566;
+     }
+     .side-img {
+        height: 1rem;
+    
+    }
+   
+
+
+
+
  }
 
 
