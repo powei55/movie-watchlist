@@ -154,6 +154,8 @@ section .get-movie {
     width: 100%;
     object-fit: cover;
     border-radius: none;
+    background-color: #e9edc9;
+    padding: .5em;
 }
 
 .data-heading {
@@ -236,7 +238,12 @@ section .get-movie {
 
 
 
-/* media queries */
+/* =================
+
+MEDIA QUERIES
+
+====================
+ */
  @media (min-width:769px) {
     .container-flex {
         flex-direction: row;
@@ -269,7 +276,6 @@ section .get-movie {
      .movie-poster-img{
         grid-row: 1 / -1 ;
         grid-column: 1 / 2 ;
-        padding: .5em;
      }
      .data-heading  {
         grid-column: 2 / -1 ;
@@ -312,6 +318,7 @@ section .get-movie {
     }
 
  }
+ /* Responsiveness for tablets */
 
  @media screen and (max-device-width:768px), screen and (max-width:481px) {
        
@@ -327,6 +334,68 @@ section .get-movie {
         input {
             width: 100%;
         }
+        
+        .movie-data {
+            grid-template: 1em auto auto auto 1em / 200px auto auto 1em;
+        }
+        .movie-poster-img{
+            grid-row: 4 / -1 ;
+            grid-column: 1 / 2 ;
+         }
+         .data-heading  {
+            grid-column: 1 / -1 ;
+            grid-row: 1 / 2;
+            align-items: center;
+         }
+
+         .data-info {
+            grid-column: 1 / -2 ;
+            grid-row: 3;
+            margin:0;
+            padding-left: 10px;
+            color: #003566;
+         }
+         .plot-text {
+            grid-row: 4 ;
+            grid-column:2 / -1 ;
+            font-size: .6rem;
+            margin: 0;
+            color: #003566;
+            text-transform: capitalize;
+            line-height: 1.5rem;
+            padding-left: 10px;
+         }
+         .film-title, .star-rating {
+            font-size: .8rem;
+            padding: 0; 
+            margin: 0;
+    
+         }
+    
+         .side-img {
+            height: .7rem;
+        }
+        .star-rating {
+            font-size: .7rem;
+        }
+        .text {
+            font-size: .5rem;
+            margin: 0;
+         }
+    
+         .watch-list-btn {
+            /* font-size: .7rem ; */
+            padding: .5em .5em;
+            margin: -2px 0 0 5px;
+         }
+         
+         button.text {
+            font-size: .5rem;
+            border-radius: 2px;
+            color: #003566;
+         }
+   
+
 
     }
 
@@ -343,11 +412,20 @@ section .get-movie {
     header {
         text-align: center;
     }
+
+    header h1 {
+        font-size: 1rem;
+    }
+    header a {
+        font-size: .7rem;
+    }
+
     nav ul {
         flex-direction: column;
     }
     nav li {
         margin: 1.5em 0;
+        
     }
 
     .find-film-div {
@@ -410,8 +488,5 @@ section .get-movie {
         text-transform: capitalize;
         line-height: .5rem;
      }
-
-
-
  }
 
