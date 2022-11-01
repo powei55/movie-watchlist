@@ -10,21 +10,23 @@
         <title>search-page</title>
     </head>
     <body>
-        
-            <header>
-                <div class="container container-flex">
-                    <h1>find your film</h1>
-                        <nav>
-                            <ul>
-                                <li><a class="current-page" href="index.html">Search movies</a></li>
-                                <li><a href="home-page.html">home</a></li> 
-                                <li><a href="watchlist.html">my watchlist</a></li>
-                                <li><a href="about-page.html">about</a></li>
-                            </ul>
-                            
-                        </nav>
-                </div>
-            </header>
+        <header>
+           
+           
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="home-page.html">home</a></li> 
+                    <li class="nav__item"><a class="nav__link  current-page" href="index.html">Search movies</a></li>
+                    <li class="nav__item"><a class="nav__link" href="watchlist.html">my watchlist</a></li>
+                    <li class="nav__item"><a class="nav__link" href="about-page.html">about</a></li>
+                </ul>
+                
+            </nav>
+        </header>
+          
 
             <section class="container container-flex">
                 <div >
@@ -40,6 +42,7 @@
     
            
         
-        <script src="index.js"></script>
+        <script src="/js/index.js"></script>
+        <script src="/js/nav.js"></script>
     </body>
 </html>

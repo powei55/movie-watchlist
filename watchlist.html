@@ -10,20 +10,24 @@
         <title>WatchList-page</title>
     </head>
     <body>
-            <header>
-                <div class="container container-flex">
-                    <h1>my watchlist</h1>
-                     <nav>
-                            <ul>
-                                <li><a href="index.html">Search movies</a></li>
-                                <li><a href="home-page.html">home</a></li> 
-                                <li><a class="current-page" href="watchlist.html">my watchlist</a></li>
-                                <li><a href="about-page.html">about</a></li>
-                            </ul>
-                            
-                        </nav>
-                </div>
-            </header>
+        <header>
+           
+           
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="home-page.html">home</a></li> 
+                    <li class="nav__item"><a class="nav__link" href="index.html">Search movies</a></li>
+                    <li class="nav__item"><a class="nav__link current-page" href="watchlist.html">my watchlist</a></li>
+                    <li class="nav__item"><a class="nav__link" href="about-page.html">about</a></li>
+                </ul>
+                
+            </nav>
+        </header>
+          
+
             <section class="container">
                     <div id="watch-list" class="watch-list-div">
                         
@@ -32,5 +36,6 @@
             </section>
         
         <script src="watchlist.js" type="module"></script>
+        <script src="/js/nav.js"></script>
     </body>
 </html>
