@@ -185,6 +185,11 @@ section .get-movie {
 
  .watch-list-div {
     margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, calc(100% / 2));
+    grid-gap: 1em 2em;
+
+
 }
 .data-info .plot-text {
     font-size: .5rem;
@@ -492,7 +497,7 @@ MEDIA QUERIES
  }
 
  .nav__link:hover {
-    color: red;
+    color: #0a9396;;
  }
 
  .nav-toggle {
@@ -537,7 +542,7 @@ MEDIA QUERIES
  .hamburger,
  .hamburger::before,
  .hamburger::after {
-    background-color: green;
+    background-color: #0a9396;;
     width: 1em;
     height: 5px;
     border-radius: 1em;
