@@ -1,5 +1,5 @@
 const searchInput = document.getElementById("movie-name")
-const getMovie = document.getElementById('search-movie')  
+const getMovie = document.getElementById('searchBtn')  
 const findFilm = document.getElementById('find-film')
 let movieArray = []
 let films = []

@@ -7,11 +7,79 @@
         <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;1,700&family=Happy+Monkey&family=Mulish:wght@200&family=Orbitron:wght@500&family=Poppins:ital,wght@0,200;1,100&family=Roboto:wght@100;300;400&family=Ubuntu:ital,wght@0,500;0,700;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
         <link rel="icon" type="image/x-icon" href="/images/my-icon.ico"/>
+        <link rel="stylesheet" href="/font-awesome/CSS/all.min.css">
         <title>search-page</title>
     </head>
     <body>
         <header>
-           
+            <a href="#" class="logo">LOGO</a>
+            <div class="group">
+                <ul class="navigation">
+                    <li><a href="home-page.html">Home</a></li>
+                    <li><a href="index.html">search movie</a></li>
+                    <li><a href="watchlist.html">my watchlist</a></li>
+                    <li><a href="about-page.html">about-page</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="search">
+                    <span class="icon">
+                        <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                        <i class="fa-solid fa-square-xmark" id="closeBtn"></i>
+                    </span>
+                </div>
+                <i class="fa-solid fa-bars" id="menuToggle"></i>
+            </div>
+            <div class="searchBox">
+                <input type="text" placeholder="search for your movie" id="movie-name">
+            </div>
+        </header>
+
+        <section class="container container-flex">
+                <div id="find-film" class="find-film-div"> </div>
+            </div>
+        </section>
+    
+        <script>
+            let searchBtn = document.querySelector('#searchBtn')
+            let closeBtn = document.querySelector('#closeBtn')
+            let searchBox = document.querySelector('.searchBox')
+            let navigation = document.querySelector('.navigation')
+            let menuToggle = document.querySelector('#menuToggle')
+            let header = document.querySelector('header')
+            
+            searchBtn.onclick = function() {
+                searchBox.classList.add('active')
+                closeBtn.classList.add('active')
+                searchBtn.classList.add('active')
+                menuToggle.classList.add('hide')
+                header.classList.remove('open')
+            }
+    
+            closeBtn.onclick = function() {
+                searchBox.classList.remove('active')
+                closeBtn.classList.remove('active')
+                searchBtn.classList.remove('active')
+                menuToggle.classList.remove('hide')
+            }
+    
+            menuToggle.onclick = function() {
+                header.classList.toggle('open')
+                searchBox.classList.remove('active')
+                closeBtn.classList.remove('active')
+                searchBtn.classList.remove('active')
+            }
+        </script>
+        
+        
+        <script src="/js/index.js"></script>
+        <script src="/js/nav.js"></script>
+    </body>
+</html>
+
+
+
+ <!-- <header>
+            
            
             <button class="nav-toggle" aria-label="toggle navigation">
                 <span class="hamburger"></span>
@@ -29,7 +97,7 @@
           
 
             <section class="container container-flex">
-                <div >
+                <div>
                     <div class="get-movie">
                         <input type="search" id="movie-name" placeholder="Searh for a movie">
                         <button id="search-movie">search</button>
@@ -40,9 +108,3 @@
             </section>
             <div id="try"></div>
     
-           
-        
-        <script src="/js/index.js"></script>
-        <script src="/js/nav.js"></script>
-    </body>
-</html>
