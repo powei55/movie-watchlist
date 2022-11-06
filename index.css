@@ -49,7 +49,7 @@ p {
 LAYOUT
 ================*/
 
-.container {
+/* .container {
     width: 90%;
     max-width: 2100px;
     margin:  0 auto;
@@ -57,8 +57,11 @@ LAYOUT
 .container-flex {
     display: flex;
     flex-direction: column;
-}
+} */
 /* styling for header */
+section, header {
+    padding: 2em 3em;
+}
 header {
     position: absolute;
     top: 0;
@@ -66,7 +69,6 @@ header {
     width: 100%;
     height: 80px;
     background: #fff;
-    padding: 2em 2.8em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,7 +78,7 @@ header {
 .logo {
     color: #333;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -224,6 +226,9 @@ header .search {
     .hide {
         visibility: hidden;
     }
+    .icon {
+        font-size: 2rem;
+    }
 }
 
 
@@ -235,7 +240,7 @@ header .search {
 
 .find-film-div {
     position: relative;
-    margin-top: 6em;
+    margin-top: 3em;
     display: grid;
     grid-template-columns: repeat(2, calc(100% / 2));
     grid-gap: 1em 2em;
@@ -332,10 +337,11 @@ MEDIA QUERIES
 ====================
  */
  @media (min-width:769px) {
-    .container-flex {
+    /* .container-flex {
         flex-direction: row;
         justify-content: space-between;
     }
+     */
     
 
     .find-film-div {
@@ -354,16 +360,14 @@ MEDIA QUERIES
         grid-column: 2 / -1 ;
         grid-row: 2 / 2;
         align-items: center;
-        padding: 10px;
+        padding-bottom: 10px;
      }
 
      .data-info {
         grid-column: 2 / -2 ;
         grid-row: 3;
         margin:0;
-        padding-bottom: 10px;
         color: #003566;
-        
 
      }
      .plot-text {
@@ -375,13 +379,16 @@ MEDIA QUERIES
         text-transform: capitalize;
         line-height: 1.5rem;
      }
+     .watch-list-btn {
+        margin-top: -0.6em;
+     }
 
      .film-title, .star-rating {
         font-size: 1rem;
         padding-right: 0; 
      }
      .text {
-        font-size: .7rem;
+        font-size: .5rem;
         color: #003566;
      }
      .side-img {
@@ -461,13 +468,14 @@ MEDIA QUERIES
 
  @media (max-width:480px) {
    
+    section, header {
+        padding: 1em;
+    }
     
     header a {
         font-size: 1rem;
     }
-   
 
-    
 
     .find-film-div {
         grid-template-columns: auto;
@@ -488,7 +496,7 @@ MEDIA QUERIES
         margin-bottom: 5px;
      }
      .film-title, .star-rating {
-        font-size: .5rem;
+        font-size: .8rem;
         padding-right: 0; 
 
      }
@@ -501,9 +509,10 @@ MEDIA QUERIES
     }
     .data-info {
         grid-column: 1 / -1;
+        grid-row: 4;
         margin:0;
         padding-left: 22px;
-        margin-bottom: 5px;
+        margin-top: 5px;
      }
      .text {
         font-size: .3rem;
@@ -523,12 +532,18 @@ MEDIA QUERIES
      }
      .plot-text {
         grid-column:1 / -1 ;
-        padding: 0 22px;
-        font-size: .3rem;
+        grid-row: 5;
+        padding: 0 22px 5px ;
+        font-size: .5rem;
         margin: 0;
         text-transform: capitalize;
         line-height: .5rem;
      }
+     .icon {
+        font-size: 1.5rem;
+        margin-left: -.5em;
+     }
+    
  }
 
  /* refractoring header */
