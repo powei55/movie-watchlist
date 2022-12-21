@@ -40,7 +40,7 @@ async function renderMovie(data) {
     
     for (let i = 0; i < movieArray.length; i++) {
         
-         const dataResponse = await fetch(`https://www.omdbapi.com/?apikey=4d776c51&i=${movieArray[i]}`)
+         const dataResponse = await fetch(`https://www.apiomdb.com/?apikey=4d776c51&i=${movieArray[i]}`)
         const data = await dataResponse.json()
         
         
