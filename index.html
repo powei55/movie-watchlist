@@ -1,34 +1,136 @@
 <html>
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;1,700&family=Happy+Monkey&family=Mulish:wght@200&family=Orbitron:wght@500&family=Poppins:ital,wght@0,200;1,100&family=Roboto:wght@100;300;400&family=Ubuntu:ital,wght@0,500;0,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <header>
-      <div class="container container-flex">
-        <h1>find your film</h1>
-        <div>
-          <a href="watchlist.html">my watchlist</a>
-        </div>
-      </div>
-    </header>
-    <section class="container">
-      <div class="get-movie">
-        <input type="search" id="movie-name" placeholder="Searh for a movie" />
-        <button id="search-movie">search</button>
-      </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;1,700&family=Happy+Monkey&family=Mulish:wght@200&family=Orbitron:wght@500&family=Poppins:ital,wght@0,200;1,100&family=Roboto:wght@100;300;400&family=Ubuntu:ital,wght@0,500;0,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" type="image/x-icon" href="/images/my-icon.ico"/>
+        <link rel="stylesheet" href="/font-awesome/CSS/all.min.css">
+        <title>search-page</title>
+    </head>
+    <body>
+        <header >
+            <a href="#" class="logo">LOGO</a>
+            <div class="group">
+                <ul class="navigation">
+                    <li><a href="home-page.html">Home</a></li>
+                    <li><a href="index.html">search movie</a></li>
+                    <li><a href="watchlist.html">my watchlist</a></li>
+                    <li><a href="about-page.html">about-page</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="search">
+                    <span class="icon">
+                        <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                        <i class="fa-solid fa-square-xmark" id="closeBtn"></i>
+                    </span>
+                </div>
+                <i class="fa-solid fa-bars" id="menuToggle"></i>
+            </div>
+            <div class="searchBox">
+                <input type="text" placeholder="search for your movie" id="movie-name">
+            </div>
+        </header>
 
-      <div id="find-film" class="find-film-div"></div>
-    </section>
-    <div id="try"></div>
-
-    <script src="index.js"></script>
-  </body>
+        <section class="container container-flex">
+                <div id="find-film" class="find-film-div"> </div>
+        </section>
+        <footer class="footer">
+        
+            <a href="mailto:hello@jane.dev" class="footer__link">ikechukwupowei21@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://codepen.io">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="http://dribbble.com">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://twitter.com">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    
+    
+        <script>
+            let searchBtn = document.querySelector('#searchBtn')
+            let closeBtn = document.querySelector('#closeBtn')
+            let searchBox = document.querySelector('.searchBox')
+            let navigation = document.querySelector('.navigation')
+            let menuToggle = document.querySelector('#menuToggle')
+            let header = document.querySelector('header')
+            
+            searchBtn.onclick = function() {
+                searchBox.classList.add('active')
+                closeBtn.classList.add('active')
+                searchBtn.classList.add('active')
+                menuToggle.classList.add('hide')
+                header.classList.remove('open')
+            }
+    
+            closeBtn.onclick = function() {
+                searchBox.classList.remove('active')
+                closeBtn.classList.remove('active')
+                searchBtn.classList.remove('active')
+                menuToggle.classList.remove('hide')
+            }
+    
+            menuToggle.onclick = function() {
+                header.classList.toggle('open')
+                searchBox.classList.remove('active')
+                closeBtn.classList.remove('active')
+                searchBtn.classList.remove('active')
+            }
+        </script>
+        
+        
+        <script src="/js/index.js"></script>
+        <script src="/js/nav.js"></script>
+    </body>
 </html>
+
+
+
+ <!-- <header>
+            
+           
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="home-page.html">home</a></li> 
+                    <li class="nav__item"><a class="nav__link  current-page" href="index.html">Search movies</a></li>
+                    <li class="nav__item"><a class="nav__link" href="watchlist.html">my watchlist</a></li>
+                    <li class="nav__item"><a class="nav__link" href="about-page.html">about</a></li>
+                </ul>
+                
+            </nav>
+        </header>
+          
+
+            <section class="container container-flex">
+                <div>
+                    <div class="get-movie">
+                        <input type="search" id="movie-name" placeholder="Searh for a movie">
+                        <button id="search-movie">search</button>
+                    </div>
+                    
+                    <div id="find-film" class="find-film-div"> </div>
+                </div>
+            </section>
+            <div id="try"></div>
+    

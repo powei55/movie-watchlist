@@ -1,5 +1,5 @@
 const searchInput = document.getElementById("movie-name")
-const getMovie = document.getElementById('search-movie')  
+const getMovie = document.getElementById('searchBtn')  
 const findFilm = document.getElementById('find-film')
 let movieArray = []
 let films = []
@@ -44,29 +44,30 @@ async function renderMovie(data) {
         const data = await dataResponse.json()
         
         
-        findFilm.innerHTML += `<div class="movie-data">
+        findFilm.innerHTML +=  ` <div class="movie-data">
+                       
+                            <img src="${data.Poster}" class="movie-poster-img">
+                            <div class="data-heading">
+                                <h3 class="film-title">${data.Title}</h3>
+                                <span><img class="side-img" src="https://us.123rf.com/450wm/jenjawin/jenjawin1904/jenjawin190400218/120265451-gold-star-rating-icon-vector-eps10-star-sign-yellow-star-icon-.jpg?ver=6"></span>
+                                <p class="star-rating">${data.imdbRating}</p>
+                            </div>
 
-                <img src="${data.Poster}" class="movie-poster-img">
-                    <div class="data-heading">
-                    
-                        <h3 class="film-title">Movie Name: ${data.Title}</h3>
-                        <span><img class="side-img" src="https://us.123rf.com/450wm/jenjawin/jenjawin1904/jenjawin190400218/120265451-gold-star-rating-icon-vector-eps10-star-sign-yellow-star-icon-.jpg?ver=6"></span>
-                        <p class="star-rating">${data.imdbRating}</p>
-                    </div>
-
-                    <div class="data-sub-title">
-                        <p class="text">${data.Runtime},</p>
-                        <p class="text"> ${data.Genre}</p>
-                        <button class=" text watch-list-btn" onclick=test("${data.imdbID}")>watchlist</button> 
-                    </div>
-                                        
-                    <div class="data-info">
-                         <p class="plot-text">${data.Plot}</p>
-                    </div>
-
-            </div>
+                            <div class="data-info">
+                                <p class="text">${data.Runtime},</p>
+                                <p class="text"> ${data.Genre}</p>
+                                <button class=" text watch-list-btn" onclick=test("${data.imdbID}")>watchlist</button> 
+                            </div>
+                                    
+                        
+                             <p class="plot-text">${data.Plot}</p>
+                                
+                              
+                            
+                       
+        </div>
         `
-       
+
     }
      
 }
