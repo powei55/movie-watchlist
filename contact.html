@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="/font-awesome/CSS/all.min.css">
     <link rel="icon" type="image/x-icon" href="/images/my-icon.ico"/>
-    <title>home-page</title>
+    <title>contact-page</title>
 </head>
 <body>
     <header>
@@ -19,18 +19,19 @@
         </button>
         <nav class="navigation">
             <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link current-page" href="home-page.html">home</a></li> 
+                <li class="nav__item"><a class="nav__link" href="home-page.html">home</a></li> 
                 <li class="nav__item"><a class="nav__link" href="index.html">Search movies</a></li>
                 <li class="nav__item"><a class="nav__link" href="watchlist.html">my watchlist</a></li>
-                <li class="nav__item"><a class="nav__link" href="about-page.html">about</a></li>
-                <li class="nav__item"><a class="nav__link" href="contact.html">contact</a></li>
+                <li class="nav__item"><a class="nav__link  current-page" href="about-page.html">about</a></li>
+                <li class="nav__item"><a class="nav__link  current-page" href="contact.html">contact</a></li>
             </ul>
         </nav>
         <div class="search"><i class="fa-solid fa-bars" id="menuToggle"></i></div>
     </header>
+    
       
-     <!-- Footer -->
-     <footer class="footer">
+      <!-- Footer -->
+      <footer class="footer">
         
         <a href="mailto:hello@jane.dev" class="footer__link">ikechukwupowei21@gmail.com</a>
         <ul class="social-list">
@@ -64,11 +65,14 @@
 
             menuToggle.onclick = function() {
             header.classList.toggle('open')
-            }
+        
+        
+            
+    }
     </script>
+        
 
-
-    <script src="home.js"></script>
-    <script src="/js/nav.js"></script>
+        <script src="index.js"></script>
+        <script src="/js/nav.js"></script>
 </body>
 </html>
