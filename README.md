@@ -1,14 +1,28 @@
-# co6694a09ada6062c800d37c8
+# Movie watchlist
+---
 
-## About Scrimba
+# Description of the projects
+movie watchlist is a  website that allows the user to create and save movie watchlists. Communicates with The Movie Database Api (http://www.omdbapi.com/?apikey=[yourkey]&) to retreive film data. Website is still under construction. You can see it here: https://bright-mochi-81e88a.netlify.app
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+## Table of Contents
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+- [About](#about)
+- [Home Page](#home-page)
+- [Search Movie](#search-movie)
+- [Popular Search](#popular-Search)
+- [Contributing](#contributing)
 
-Happy Coding!
-# movie-watchlist
+## About
+Movie watchlist is designed to allow users search for blockblusters movies, have the ability store and watch them at thier convinence.
+
+## Home Page
+
+
+## Search Movie
+
+
+## Popular Search
+
+
+## Contributing
+Contributors names.
