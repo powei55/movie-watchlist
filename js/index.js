@@ -1,132 +1,42 @@
-const searchInput = document.getElementById("movie-name")
-const getMovie = document.getElementById('searchBtn')  
-const findFilm = document.getElementById('find-film')
-let movieArray = []
-let films = []
 
-getMovie.addEventListener('click', e => {
-    e.preventDefault()
-    loadMovies()
-})
+function displayMovies(movies) {
+    let myMoviesHtml = movies.map(movie => {
+        // const url = movie.image.url
+        return  `<div class="homepage-info">
+                   
+                    <h2 class="home-title">${movie.title}</h2>
+                    <p class="home-info">${movie.titleType}, ${movie.year}</p>
+                </div>`
+    }).join('')
 
-    
-    async function loadMovies() {
-        findFilm.innerHTML = ""
-        movieArray = []
-        const url = `https://www.omdbapi.com/?apikey=4d776c51&s=${searchInput.value}`
-        const res = await fetch(`${url}`)
-        const data = await res.json()
-        
-        console.log(data.Response)
-        
-        if(data.Response === "True") {
-            renderMovie(data)
-        } else {
-           findFilm.innerHTML = `<div class="fail-container">                 
-                  <p class="fail-text">Unable to find what you’re looking for. Please try another search.</p>
-                  </div>
-            `
-        } 
-        
+    console.log(myMoviesHtml)
+     document.getElementById("homepage").innerHTML = `<div class="homepage-info">
+            ${myMoviesHtml}        
+     <div>`
 }
 
 
+{/* <img  class="movie-home-img" src=${url} alt="">  */}
+
+
+async function logMovies(movieLimit) {
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '330915ddb9msh82893474b451bd7p16d632jsn2ae3921142e4',
+            'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
+        }
+    };
     
+    const response = await fetch(`https://imdb8.p.rapidapi.com/title/v2/find?title=game%20of&limit=${movieLimit}&sortArg=moviemeter%2Casc`, options)
+    const  allmovies = await response.json()
+    let randomMovies = allmovies.results
+      
 
-async function renderMovie(data) {
-    for (let i = 0; i < 6; i++) {
-       movieArray.push(data.Search[i].imdbID)
-    }
-    
-    for (let i = 0; i < movieArray.length; i++) {
-        
-         const dataResponse = await fetch(`https://www.apiomdb.com/?apikey=4d776c51&i=${movieArray[i]}`)
-        const data = await dataResponse.json()
-        
-        
-        findFilm.innerHTML +=  ` <div class="movie-data">
-                       
-                            <img src="${data.Poster}" class="movie-poster-img">
-                            <div class="data-heading">
-                                <h3 class="film-title">${data.Title}</h3>
-                                <span><img class="side-img" src="https://us.123rf.com/450wm/jenjawin/jenjawin1904/jenjawin190400218/120265451-gold-star-rating-icon-vector-eps10-star-sign-yellow-star-icon-.jpg?ver=6"></span>
-                                <p class="star-rating">${data.imdbRating}</p>
-                            </div>
-
-                            <div class="data-info">
-                                <p class="text">${data.Runtime},</p>
-                                <p class="text"> ${data.Genre}</p>
-                                <button class=" text watch-list-btn" onclick=test("${data.imdbID}")>watchlist</button> 
-                            </div>
-                                    
-                        
-                             <p class="plot-text">${data.Plot}</p>
-                                
-                              
-                            
-                       
-        </div>
-        `
-
-    }
-     
+      displayMovies(randomMovies)
+    console.log(randomMovies)
 }
+let movieLimit = 12
 
-async function test(title) {
-    const res = await fetch(`https://www.omdbapi.com/?apikey=4d776c51&i=${title}`)
-    const result = await res.json()
-    console.log(result)
+logMovies(movieLimit)
     
-    localStorage.setItem("movies", JSON.stringify(result))
-}
-    
-    
-
-
-
-
-
-
-
-
-
-// localStorage.setItem('myCat', 'Tom');
-// const cat = localStorage.getItem('myCat')
-
-// localStorage.removeItem(cat);
-// localStorage.clear();
-// console.log(cat)
-// 
-// findFilm.innerHTML += `
-//             <div class="movie-data">
-//                         <div class="movie-data-primary">
-//                             <img src="${data.Poster}" class="movie-poster-img">
-//                         </div>
-                        
-//                         <div class="movie-data-secondary">
-//                             <div class="data-heading">
-//                                 <h3 class="film-title">${data.Title}</h3>
-//                                 <span><img class="side-img" src="https://us.123rf.com/450wm/jenjawin/jenjawin1904/jenjawin190400218/120265451-gold-star-rating-icon-vector-eps10-star-sign-yellow-star-icon-.jpg?ver=6"></span>
-//                                 <p>${data.imdbRating}</p>
-//                             </div>
-                            
-//                             <div class="data-details">
-//                                  <div class="data-sub-title">
-//                                     <p class="text">${data.Runtime}</p>
-//                                     <p class="text"> ${data.Genre}</p>
-//                                     <button class="text" name="add" id="${data.imdbID}"><img class="side-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Plus_symbol.svg/1200px-Plus_symbol.svg.png" 
-//                                     onclick=test("${data.imdbID}")></button>
-//                                     <p class="text">watchlist</p>
-//                                 </div>
-                                   
-//                                 <div class="data-info">
-//                                      <p class="text">${data.Plot}</p>
-//                                 </div>
-//                             </div>
-                            
-//                         </div>
-//             </div>
-//         `
-       
-
-//  

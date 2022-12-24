@@ -373,6 +373,29 @@ i {
     font-weight: 900;
 }
 
+/* ==============
+    home-page
+================*/
+.main-homepage {
+
+}
+   .homepage-info {
+        margin-top: 5em;
+        margin-left: 2em;
+        /* border: 10px solid #ccd5ae; */
+        
+   }
+
+  .movie-home-img {
+    width: 7em;
+  }
+  .home-title {
+    font-size: .8rem;
+  }
+  .home-info {
+    font-size: .5rem;
+  }
+
 /* =================
     FOOTER
 ==================*/
