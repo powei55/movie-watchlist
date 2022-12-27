@@ -64,7 +64,7 @@ section, header {
     padding: 2em 2em;
 }
 header {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
@@ -74,6 +74,7 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05) ;
+    margin-bottom: 1em;
 }
 
 .logo {
@@ -405,7 +406,7 @@ i {
     background: #111;
     color:#f2e8cf;
     text-align: center;
-    margin-top: 5em;
+    margin-top: 2em;
     padding: .5em 0;
 }
 
@@ -443,6 +444,73 @@ i {
 .social-list__link {
     padding: .5em;
 }
+
+/* ==============
+    About-page
+================*/
+    main {
+        padding: 0 2em;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Poppins', sans-serif;
+    }
+    .about-section {
+        order: 1;
+    }
+    .about-title {
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin-bottom: .5em;
+    }
+    .about-info {
+        font-size: .5rem;
+        margin-bottom: 1em;
+    }
+    .read-more {
+        text-decoration: none;
+        background-color: #003566;
+        font-size: .7rem;
+        padding: .5em 1em;
+        border-radius: 5px;
+        text-transform: capitalize;
+        color: #fff;
+        font-weight: 700;
+    }
+    .read-more:hover {
+        color: #000000;
+    }
+    .about-img {
+        /* height: 4em; */
+        border-radius: 5px;
+        margin-bottom: .6em;
+    }
+
+    @media (min-width:800px)  {
+        main {
+            flex-direction: row;
+        }
+        .about-section {
+            order: -1;
+        }
+        .about-title {
+            font-size: 1.5rem;
+        }
+        .about-img {
+            width: 40em;
+            height: 10em;
+        }
+        .about-info {
+            width: 80%;
+            font-size: .8rem;
+        }
+    }
+
+
+
+
+
+
+
 /* =================
 
 MEDIA QUERIES
