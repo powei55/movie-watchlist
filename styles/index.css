@@ -60,11 +60,13 @@ LAYOUT
     flex-direction: column;
 } */
 /* styling for header */
+.search-header {
+    position: absolute;
+}
 section, header {
     padding: 2em 2em;
 }
 header {
-    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
@@ -149,7 +151,7 @@ i {
 .searchBox.active {
     right: 0;
 }
-.searchBox input {
+.searchBox #input {
     width: 100%;
     border: none;
     outline: none;
@@ -505,6 +507,28 @@ i {
         }
     }
 
+    @media (max-width:300px) {
+        .about-title {
+            font-size: .8rem;
+        }
+
+        .about-info {
+            width: 100%;
+            font-size: .4rem;
+            letter-spacing: 1px;
+        }
+        .read-more {
+            font-size: .5rem;
+        }
+        .footer__link {
+            font-size: .5rem;
+            letter-spacing: 1px;
+        }
+        .social-list__link {
+            font-size: small;
+        }
+    }
+
     /* ==============
         Contact-Page
     =================*/
@@ -703,6 +727,19 @@ i {
             color: #003566;
          }
    
+    }
+
+    @media (max-width:300px) {
+        .footer__link {
+            font-size: .5rem;
+            letter-spacing: 1px;
+        }
+        .social-list__link {
+            font-size: small;
+        }
+        #menuToggle {
+            font-size: 1rem;
+        }
     }
 
  
