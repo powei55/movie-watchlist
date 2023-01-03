@@ -17,7 +17,7 @@
     <title>search-page</title>
   </head>
   <body>
-    <header>
+    <header class="search-header">
       <a href="/" class="logo">LOGO</a>
       <div class="group">
         <ul class="navigation">
@@ -36,7 +36,7 @@
         <i class="fa-solid fa-bars" id="menuToggle"></i>
       </div>
       <div class="searchBox">
-        <input
+        <input 
           type="text"
           placeholder="search for your movie"
           id="movie-name"
@@ -75,40 +75,12 @@
       </ul>
     </footer>
 
-    <script>
-      let searchBtn = document.querySelector('#searchBtn');
-      let closeBtn = document.querySelector('#closeBtn');
-      let searchBox = document.querySelector('.searchBox');
-      let navigation = document.querySelector('.navigation');
-      let menuToggle = document.querySelector('#menuToggle');
-      let header = document.querySelector('header');
+   
 
-      searchBtn.onclick = function () {
-        searchBox.classList.add('active');
-        closeBtn.classList.add('active');
-        searchBtn.classList.add('active');
-        menuToggle.classList.add('hide');
-        header.classList.remove('open');
-      };
-
-      closeBtn.onclick = function () {
-        searchBox.classList.remove('active');
-        closeBtn.classList.remove('active');
-        searchBtn.classList.remove('active');
-        menuToggle.classList.remove('hide');
-      };
-
-      menuToggle.onclick = function () {
-        header.classList.toggle('open');
-        searchBox.classList.remove('active');
-        closeBtn.classList.remove('active');
-        searchBtn.classList.remove('active');
-      };
-    </script>
-
-    <script src="/js/search.js"></script>
-    <script src="/js/nav.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/nav.js"></script>
   </body>
+  
 </html>
 
 <!-- <header>

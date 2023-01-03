@@ -1,15 +1,44 @@
-const searchInput = document.getElementById("movie-name")
-const getMovie = document.getElementById('searchBtn')  
+const searchInput = document.querySelector("#movie-name")
+// const getMovie = document.getElementById('searchBtn')  
 const findFilm = document.getElementById('find-film')
 let movieArray = []
 let films = []
+let searchBtn = document.querySelector('#searchBtn');
+let closeBtn = document.querySelector('#closeBtn');
+let searchBox = document.querySelector('.searchBox');
+let navigation = document.querySelector('.navigation');
+let menuToggle = document.querySelector('#menuToggle');
+let header = document.querySelector('header');
 
-searchInput.addEventListener('change', e => {
+searchBtn.onclick = function () {
+  searchBox.classList.add('active');
+  closeBtn.classList.add('active');
+  searchBtn.classList.add('active');
+  menuToggle.classList.add('hide');
+  header.classList.remove('open');
+};
+
+closeBtn.onclick = function () {
+  searchBox.classList.remove('active');
+  closeBtn.classList.remove('active');
+  searchBtn.classList.remove('active');
+  menuToggle.classList.remove('hide');
+};
+
+menuToggle.onclick = function () {
+  header.classList.toggle('open');
+  searchBox.classList.remove('active');
+  closeBtn.classList.remove('active');
+  searchBtn.classList.remove('active');
+};
+
+
+searchBtn.addEventListener('click', e => {
     e.preventDefault()
     loadMovies()
-    console.log(searchInput.value)
-})
-
+   console.log(loadMovies)
+});
+   
     
     async function loadMovies() {
         findFilm.innerHTML = ""
@@ -46,7 +75,6 @@ async function renderMovie(data) {
         
         
         findFilm.innerHTML +=  ` <div class="movie-data">
-                       
                             <img src="${data.Poster}" class="movie-poster-img">
                             <div class="data-heading">
                                 <h3 class="film-title">${data.Title}</h3>
