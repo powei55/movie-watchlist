@@ -204,17 +204,7 @@ i {
     #menuToggle {
         position: absolute;
         display: block;
-        font-size: 1em;
-        cursor: pointer;
-        transform: translateX(30px);
-        z-index: 10;
-
-    }
-    header .navigation {
-        position: absolute;
-        opacity: 0;
-        visibility: hidden;
-        left: 100%;
+        font-size: 1rem;
     }
     header.open .navigation {
         top: 80px;
@@ -239,6 +229,21 @@ i {
         border-top: 1px solid rgba(0, 0, 0, 0.05);
 
     }
+   
+    
+    
+
+    
+    
+    
+    header .navigation {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        left: 100%;
+    }
+   
+    
 
     header.open .navigation li a {
         font-size: 1.25em;
@@ -250,6 +255,7 @@ i {
     .icon {
         font-size: 2rem;
     }
+    
 }
 
 
@@ -733,6 +739,8 @@ i {
    
     }
 
+    
+
     @media (max-width:300px) {
         .footer__link {
             font-size: .5rem;
@@ -770,3 +778,29 @@ i {
 
 
 
+
+
+    /* top: 60px;
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    height: calc(100vh - 80px);
+    padding: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05); */
+
+    /* header.open .navigation {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(100%);
+        transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+    } */
