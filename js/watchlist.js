@@ -1,24 +1,18 @@
-let watchListDiv = document.getElementById('watch-list')
-let moviesFromLocalStorage = JSON.parse(localStorage.getItem("movies") ) || []
-
+let watchListDiv = document.getElementById('watch-list');
+let moviesFromLocalStorage = JSON.parse(localStorage.getItem('movies')) || [];
 
 if (watchListDiv.innerHTML) {
-    watchListDiv.innerHTML += getHtml(moviesFromLocalStorage)
-}else {
-    watchListDiv.innerHTML = `<div> there is no stored films here</div>`
+  watchListDiv.innerHTML += getHtml(moviesFromLocalStorage);
+} else {
+  watchListDiv.innerHTML = `<div> there is no stored films here</div>`;
 }
 
+document.getElementById('remove').addEventListener('click', () => {
+  watchListDiv.innerHTML = '';
+});
 
-document.getElementById("remove").addEventListener("click", () => {
-     watchListDiv.innerHTML = "";
-})
-
-    
-
-    
 function getHtml(data) {
-    
-        return ` <div class="movie-data">
+  return ` <div class="movie-data">
                        
                         <img src="${data.Poster}" class="movie-poster-img">
                         <div class="data-heading">
@@ -34,6 +28,5 @@ function getHtml(data) {
                         </div>
                         <p class="plot-text">${data.Plot}</p>
                 </div>
-`
-
+`;
 }
