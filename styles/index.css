@@ -5,7 +5,6 @@
 }
 html,
 body {
-  /* background: #dee1e2; */
   min-height: 100vh;
   overflow-x: hidden;
   font-size: 1.5rem;
@@ -49,18 +48,12 @@ p {
 LAYOUT
 ================*/
 
-/* .container {
-    width: 90%;
-    max-width: 2100px;
-    margin:  0 auto;
-}
-.container-flex {
-    display: flex;
-    flex-direction: column;
-} */
 /* styling for header */
 .search-header {
   position: absolute;
+}
+.search_list {
+  margin-left: 7em;
 }
 section,
 header {
@@ -138,6 +131,7 @@ header .search {
   z-index: 10;
   cursor: pointer;
 }
+
 i {
   font-size: 1rem;
 }
@@ -207,32 +201,47 @@ i {
   }
   header.open .navigation {
     top: 80px;
+    /* top: 0; */
     opacity: 1;
     visibility: visible;
     left: 0;
     display: flex;
     flex-direction: column;
-    background: #fff;
+    /* background: #fff; */
     width: 100%;
-    height: calc(100vh - 80px);
+    /* height: calc(100vh - 80px); */
+
     padding: 40px;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    /* border-top: 1px solid rgba(0, 0, 0, 0.05); */
   }
+
   .nav__list {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     background: black;
     font-size: 0.8rem;
-    padding: 2em 0.5em;
-    height: calc(100vh - 80px);
+    height: 100%;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin: 1.2em 0 -5em -2.1em;
+    padding: 0.5em;
   }
 
   header .navigation {
     position: absolute;
     opacity: 0;
-    visibility: hidden;
-    left: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+  }
+
+  .open .navigation {
+    transform: translateX(0);
   }
 
   header.open .navigation li a {
@@ -244,6 +253,18 @@ i {
   }
   .icon {
     font-size: 2rem;
+  }
+  #menuToggle {
+    margin-left: 0.5em;
+    margin-top: 0.3em;
+  }
+
+  .search_list {
+    flex-direction: column;
+    font-size: 0.5rem;
+    background: #0a0908;
+    margin: 2em 0 -5em -3.4em;
+    padding: 1em 0.5em;
   }
 }
 
@@ -639,6 +660,18 @@ label {
   header a {
     font-size: 1rem;
   }
+
+  .nav__list {
+    font-size: 0.5rem;
+    padding: 1em 2em;
+    margin: -3.3em 0 0 -3.5em;
+  }
+
+  .search_list {
+    font-size: 0.5rem;
+    margin: -3.3em 0 0 -3.5em;
+    padding: 3em 1em;
+  }
 }
 
 /* RESPONSIVENESS FOR TABLETS */
@@ -722,28 +755,3 @@ label {
     font-size: 1rem;
   }
 }
-
-/* top: 60px;
-    opacity: 1;
-    visibility: visible;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    width: 100%;
-    height: calc(100vh - 80px);
-    padding: 40px;
-    border-top: 1px solid rgba(0, 0, 0, 0.05); */
-
-/* header.open .navigation {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 100;
-        visibility: visible;
-        opacity: 1;
-        transform: translateX(100%);
-        transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
-    } */

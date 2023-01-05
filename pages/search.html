@@ -19,22 +19,25 @@
   <body>
     <header class="search-header">
       <a href="/" class="logo">LOGO</a>
-      <div class="group">
-        <ul class="navigation">
+      <!-- <div class="group"> -->
+      <nav class="navigation">
+        <ul class="search_list">
           <!-- <li><a href="../index.html">Home</a></li> -->
-          <li><a href="search.html">search movie</a></li>
-          <li><a href="watchlist.html">my watchlist</a></li>
-          <li><a href="about-page.html">about-page</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a class="search-link" href="search.html">search movie</a></li>
+          <li><a class="search-link" href="watchlist.html">my watchlist</a></li>
+          <li><a class="search-link" href="about-page.html">about-page</a></li>
+          <li><a class="search-link" href="contact.html">Contact</a></li>
         </ul>
-        <div class="search">
-          <span class="icon">
-            <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
-            <i class="fa-solid fa-square-xmark" id="closeBtn"></i>
-          </span>
-        </div>
+      </nav>
+      <div class="search">
+        <span class="icon">
+          <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+          <i class="fa-solid fa-square-xmark" id="closeBtn"></i>
+        </span>
         <i class="fa-solid fa-bars" id="menuToggle"></i>
       </div>
+
+      <!-- </div> -->
       <div class="searchBox">
         <input type="text" placeholder="search for your movie" id="movie-name" />
       </div>
