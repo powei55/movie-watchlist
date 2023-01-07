@@ -123,7 +123,7 @@ header ul li a:hover::before {
 }
 
 header .search {
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -228,7 +228,7 @@ i {
   }
 
   header .navigation {
-    position: relative;
+    position: absolute;
     opacity: 0;
     left: 0;
     top: 0;
