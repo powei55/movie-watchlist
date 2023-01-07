@@ -5,7 +5,7 @@
 }
 html,
 body {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   overflow-x: hidden;
   font-size: 1.5rem;
   font-family: 'Ubuntu', sans-serif;
@@ -73,7 +73,7 @@ header {
 }
 
 .home-nav {
-  margin-left: 8em;
+  margin-left: 15em;
 }
 
 .logo {
@@ -228,7 +228,7 @@ i {
   }
 
   header .navigation {
-    position: absolute;
+    position: relative;
     opacity: 0;
     left: 0;
     top: 0;
