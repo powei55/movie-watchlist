@@ -25,6 +25,9 @@ p {
   font-weight: 900;
   color: black;
 }
+button {
+  background-color: transparent;
+}
 
 .film-title {
   font-size: 0.5rem;
